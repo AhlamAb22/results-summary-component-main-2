@@ -1,0 +1,225 @@
+:root {
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-red-background: hsla(0, 100%, 67%, 0.1);
+    --Orangey-yellow-background: hsla(39, 100%, 56%, 0.1);
+    --Green-teal-background: hsla(166, 100%, 37%, 0.1);
+    --Cobalt-blue-background: hsla(234, 85%, 45%, 0.1);
+    /* Gradients */
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    /* Circle */
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h5 {
+    color: var(--Pale-blue);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#great {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#details {
+    color: var(--Light-lavender);
+    font-size: 15px;
+}
+
+#the-score {
+    color: hsla(224, 30%, 27%, 0.7);
+}
+
+b,
+#summary {
+    color: var(--Dark-gray-blue);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    height: 60%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 5px 5px 5px 2px #00000021;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.purple {
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to bottom,
+            var(--Light-slate-blue),
+            var(--Light-royal-blue));
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--White);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.purple-content {
+    text-align: center;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.white {
+    height: 100%;
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+}
+
+.the-result {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,
+            var(--Violet-blue),
+            var(--Persian-blue));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.score-detailes {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Total-score {
+    height: 40%;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.reaction {
+    background-color: var(--Light-red-background);
+    color: var(--Light-red);
+}
+
+.memory {
+    background-color: var(--Orangey-yellow-background);
+    color: var(--Orangey-yellow);
+}
+
+.verbal {
+    background-color: var(--Green-teal-background);
+    color: var(--Green-teal);
+}
+
+.visual {
+    background-color: var(--Cobalt-blue-background);
+    color: var(--Cobalt-blue);
+}
+
+.specific-score {
+    display: flex;
+    justify-content: space-around;
+}
+
+.img-part {
+    display: flex;
+}
+
+img {
+    margin-right: 5px;
+}
+
+button {
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(to bottom,
+            var(--Light-slate-blue),
+            var(--Light-royal-blue));
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    .purple {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    #the-score {
+        font-size: 13px;
+    }
+
+}
